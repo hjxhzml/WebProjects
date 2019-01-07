@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js使用方式</title>
+
+</head>
+<body>
+    <div class="box">你好，同学</div>
+    <!--html骨架（页面结构），csss是样式（元素大小，颜色，位置，隐藏或显示等），js是行为（部分动画效果，页面与用户交互等）-->
+    <!--引入js文件的script标签内一定不能再写js代码-->
+    <!--js调试常用alect("")和console.log("")-->
+    <script src="test.js"></script>
+    <script>
+        var box = document.querySelector(".box");
+        box.innerText="你好，朋友";
+    </script>
+</body>
+</html>

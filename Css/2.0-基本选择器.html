@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+    <style>
+        /*标签选择器*/
+        p{
+            color: skyblue;
+        }
+        /*id选择器*/
+        #ha{
+            color: red;
+        }
+        /*class选择器*/
+        .test{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 基本选择器：标签/id/class选择器 -->
+    <!-- 选择器的（权重越大就越优先）优先级：id选择器：100 > class选择器：10 > 标签选择器：1 -->
+    <p>我就是我，不一样的烟火，我是标签选择器</p>
+    <p id="ha">我就是我，不一样的烟火，我是id选择器</p>
+    <p class="test">我就是我，不一样的烟火，我是class选择器</p>
+
+
+</body>
+</html>

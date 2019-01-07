@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js作业1.2</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div>我就是我</div>
+    <p><input type="button" value="改变"></p>
+
+    <script>
+        var obj = document.getElementsByTagName("div")[0];
+        var btn = document.getElementsByTagName("input")[0];
+        btn.onclick=function () {
+            // 第一种方式(背景)
+            // obj.style.background="red";
+            var a = "background";
+            var b = "red";
+            // 第一种方式
+            obj.style[a]=b;
+
+            // 第二种(字体)
+            var c = "color";
+            var d = "purple";
+            // obj.style.cssText="color:purple";
+            obj.style.cssText=c+":"+d;
+        };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css引入方式</title>
+
+    <!-- 第二种引入方式：在head标签内加入<style>标签进行设置 -->
+    <style>
+        div{
+            font-size:50px;
+        }
+    </style>
+
+    <link href="1-css.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <!-- 第一种引入方式：直接在标签内设置 -->
+    <p style="color: red;">css引入方式一</p>
+
+    <!-- 第二种引入方式：在head标签内加入<style>标签进行设置 -->
+    <div>css引入方式二</div>
+
+    <!-- 第三种引入方式：新建一个css文件,在css文件中添加属性；
+    之后在head头部添加 <link href="1-css.css" type="text/css" rel="stylesheet"> -->
+    <a href="javascript:void (0);">css引入方式三</a>
+
+<!-- 三种css样式的优先级排名： 就近原则。行内第一。-->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+        }
+        .test{
+            background: blue;
+            /*（以父元素为准）绝对定位 ：脱离文档流*/
+            position: absolute;
+            left: 300px;
+        }
+        .box{
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="test"></div>
+    <div class="box">参照物</div>
+</body>
+</html>

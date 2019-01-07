@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件操作补充</title>
+</head>
+<body>
+    <select id="sel">
+        <option>广州市</option>
+        <option>深圳市</option>
+        <option>茂名市</option>
+        <option>化州市</option>
+    </select>
+
+    <script>
+        // 窗口发生变化时
+        window.onresize=function (ev) {
+            console.log("窗口变化了");
+        }
+        //下拉框
+        var obj=document.getElementById("sel");
+        obj.onchange=function () {
+            console.log("下拉框内容改变了")
+        }
+    </script>
+</body>
+</html>

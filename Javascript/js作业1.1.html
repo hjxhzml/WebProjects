@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js作业1.1</title>
+</head>
+<body>
+    <p>属&emsp;性<input type="text" name="attr"></p>
+    <p>属性值<input type="text" name="attrV"></p>
+
+    <input type="button" value="获取输入值">
+、
+    <script>
+        var obj = document.getElementsByTagName("input");
+        // var attr = obj[0].value;
+        obj[2].onclick=function () {
+            var attr = obj[0].value;
+            var attrV = obj[1].value;
+            // console.log(attr);
+            // console.log(attrV);
+            console.log(attr,attrV);
+        };
+        var attrV = obj[1].value;
+
+    </script>
+</body>
+</html>

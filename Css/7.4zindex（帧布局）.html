@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zindex</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        ul{
+            /*去掉无序列表的点点*/
+            list-style: none;
+        }
+        div{
+            height: 200px;
+            width: 800px;
+            background: mediumpurple;
+            /*上边距为20px，左右各一半*/
+            margin: 20px auto;
+            /*父盒子相对布局*/
+            position: relative;
+        }
+        img{
+            height: 200px;
+            width: 800px;
+            /*子盒子绝对布局*/
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="pic">
+            <!--z-index:数值，数值越大越在上面-->
+            <li><img style="z-index: -1" src="https://res.shiguangkey.com//file/201806/19/20180619142252602590185.jpg"></li>
+            <li><img  style="z-index: 0" src="https://res.shiguangkey.com//file/201806/21/20180621150342030454625.jpg"></li>
+        </ul>
+    </div>
+</body>
+</html>

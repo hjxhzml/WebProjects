@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父相子绝</title>
+    <style>
+        .parent{
+            height: 500px;
+            width: 500px;
+            background: blue;
+            /*第一步：父盒子相对定位*/
+            position: relative;
+        }
+        .child{
+            height: 100px;
+            width: 100px;
+            background: mediumpurple;
+            /*第一步：子盒子绝对定位*/
+            position: absolute;
+            /*left: 200px;*/
+            /*top: 200px;*/
+            left: 50%;
+            margin-left: -50px;
+            top: 50%;
+            margin-top: -50px;
+        }
+    </style>
+</head>
+<body>
+<!--父相子绝：父盒子来相对定位是为了不脱离文档流（页面的布局不发生变化）
+，子盒子绝地定位（位置可以任意）-->
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

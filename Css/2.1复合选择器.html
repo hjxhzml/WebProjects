@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复合选择器</title>
+    <style>
+        /*后代选择器，范围包过：儿子，孙子，孙子的儿子...*/
+        div span{
+            color: skyblue;
+        }
+         /*子代选择器*/
+        #box>span{
+            font-size: 50px;
+        }
+        /*相邻选择器，范围只是相邻的相关元素*/
+        .xl+span{
+            color: red;
+        }
+        /*兄弟选择器，范围是同级的修改元素*/
+        .br~span{
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+ <!-- 后代选择器/子选择器/相邻选择器/兄弟选择器  -->r
+    <div>
+        <p>我就是我，<span>不一样</span>的烟火</p>
+        <p>我是<span>移动互联</span>173</p>
+    </div>
+
+    <div id="box">
+        <p>我就是我<span>不一样</span>烟火</p>
+        <span>我们不一样</span>
+    </div>
+
+    <p class="xl">选择中心</p>
+    <span>相邻</span>
+    <div>相隔</div>
+    <span>相离</span>
+
+    <div>
+    <p class="br">选择中心</p>
+    <span>相邻</span>
+    <div>相隔</div>
+    <span>相离</span>
+    </div>
+
+</body>
+</html>

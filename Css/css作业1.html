@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css作业1</title>
+    <style>
+        *{
+            /*外边距和内边距都设置为零*/
+            margin: 0;
+            padding: 0;
+        }
+        /*去掉全部a标签的下划线*/
+        a{
+            text-decoration: none;
+        }
+        body{
+            background: #ffe6a4;
+        }
+        .top{
+            height: 60px;
+            width: 100%;
+            background: black;
+        }
+        .mid{
+            height: 800px;
+            width: 100%;
+        }
+        .bot1{
+            height: 120px;
+            width: 100%;
+            background: gray;
+        }
+        .bot2{
+            height: 60px;
+            width: 100%;
+            background: black;
+        }
+        .con{
+            height: 600px;
+            width: 500px;
+            background: white;
+            /*margin:是上下左右边距30px,auto就是左右各一半*/
+            margin: 30px auto;
+        }
+        .con-top{
+            height: 50px;
+            width: 460px;
+            /*画一条线*/
+            border-bottom:1px solid #3c3c3c;
+            /*左右边距20px;*/
+            margin-left: 20px;
+            /*设置跟高度一样就会上下居中*/
+            line-height: 50px;
+        }
+        .con-top h3{
+            float:left;
+            font-weight: normal;
+            font-size: 20px;
+            /*下滑线设置*/
+            border-bottom: 3px solid blueviolet;
+        }
+        .con-top a{
+            float:right;
+            font-size: 20px;
+            color: skyblue;
+        }
+
+        .con-regist{
+            /*为本框距离左边20px*/
+            margin-left: 20px;
+        }
+        .con-regist input{
+            height: 50px;
+            width: 460px;
+            /*文本框之间的上下距离为20px*/
+            margin-top: 20px;
+            /*文本框里面的提示文本大小*/
+            font-size: 18px;
+            /*文本框里面的提示文本开头空一个字符(1em)*/
+            text-indent: 1em;
+            /*所以input边框实现圆角*/
+            border-radius: 5px;
+            /*默认边框不好看，需要重新设置*/
+            border: 1px solid gray;
+        }
+        /*对class="inp"（发送验证码）的两个input框进行修改缩进*/
+        .con-regist .inp{
+            width: 300px;
+        }
+        /*对发送验证码的链接加个框*/
+        .con-regist a{
+            /*边框的大小和粗细*/
+            border: 1px solid mediumpurple;
+            /*可以有行内标签的效果（在一行中显现），同时具有块级标签的效果（可以设置宽高）*/
+            display: inline-block;
+            height: 50px;
+            width: 130px;
+            /*距离左边20px*/
+            margin-left: 23px;
+            /*边框上下居中*/
+            line-height: 50px;
+            /*文字居中*/
+            text-align: center;
+            /*所以a标签边框实现圆角*/
+            border-radius: 5px;
+        }
+
+        .con-regist .btn{
+            /*提交按钮的颜色*/
+            background: #3aeb9b;
+            /*立即注册的字体颜色*/
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+
+    <div class="mid">
+        <div class="con">
+            <div class="con-top">
+                <h3>请注册</h3>
+                <a href="javascript:void(0);">立即登录&gt;</a>
+            </div>
+
+            <div class="con-regist">
+                <form action="" method="post">
+                    <input type="text" placeholder="请输入手机号" name="phone"><br>
+                    <input class="inp" type="text" placeholder="请输入短信验证码" name="cookie">
+                    <a href="javascript:void (0);">发送验证码</a><br>
+                    <input type="text" placeholder="请输入用户名" name="usr"><br>
+                    <input type="password" placeholder="请输入密码" name="psw"><br>
+                    <input type="password" placeholder="请再次输入密码" name="pswD"><br>
+                    <input class="inp" type="text" placeholder="请输入图形验证码" name="cookieImg">
+                    <a href="javascript:void (0);"><img>图形验证码</a><br>
+                    <input class="btn" type="submit" value="立即注册">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="bot1"></div>
+
+    <div class="bot2"></div>
+
+</body>
+</html>

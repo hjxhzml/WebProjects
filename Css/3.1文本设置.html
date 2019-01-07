@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本设置</title>
+    <style>
+        p{
+            /*首行缩进*/
+            text-indent: 2em;
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+
+            /*三个一定要组合使用*/
+            /*不换行*/
+            white-space: nowrap;
+            /*超出范围不显示*/
+            overflow: hidden;
+            /*超出范围的部分用…显示*/
+            text-overflow: ellipsis;
+        }
+        div{
+            width:200px;
+            background-color: skyblue;
+            /*文字居中*/
+                /*上下居中*/
+                height:200px;
+                line-height: 200px;
+                /*左右居中*/
+                text-align: center;
+        }
+        a{
+            /*超文本连接没有下划线*/
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+    <p>都说你离我们很远 悠悠两千多年 其实你离我们很近 一直在路上攀谈 都说你离我们很远
+    悠悠两千多年 其实你离我们很近 一直在我们憧憬 茫茫天地万象 读懂你的人 们
+    听来似深也浅 就会大悟恍然 茫茫天地万象 听来似深也浅 一位时光老人 留下旷世真言
+    留下旷世真言</p>
+
+    <div>我就是我</div>
+    <a href="#">我是a标签</a>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性操作</title>
+</head>
+<body>
+    <div id="box">属性操作</div>
+
+    <script>
+
+        //获取元素
+        var obj=document.getElementById("box");
+
+        // js操作合法的属性(增删改查)
+        // 增
+        obj.className="test";
+        // 改
+        obj.className="upup";
+        // 查
+        console.log(box.className);
+        // 删
+        obj.removeAttribute("class");
+
+        // js操作自定义属性（增删改查）
+        // 增
+        obj.setAttribute("a","b");
+        // 改
+        obj.setAttribute("a","upup");
+        // 查（判读）
+        console.log(obj.hasAttribute("a"));
+        // 删
+        obj.removeAttribute("a")
+    </script>
+</body>
+</html>

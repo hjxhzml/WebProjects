@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js修改样式</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background: skyblue;
+        }
+        /*多个样式修改*/
+        .test{
+            font-size: 50px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>你好，同学</div>
+
+    <script>
+        // <!--单个样式修改-->
+        // style作用在行内 优先级最高
+        var box = document.getElementsByTagName("div")[0];
+        box.style.color="red";
+        box.style.fontSize="50px";
+
+        // 单个样式修改，变量修改
+        // box.style[a]=b;
+
+        // 多个样式修改
+        // box.style.cssText="width:100px;height:100px;color:blue;";
+        // box.style.cssText=a+":"+b;8====box.style[a]=b;
+
+        // 就近原则
+        box.className="test"
+    </script>
+
+</body>
+</html>

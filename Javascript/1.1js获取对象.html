@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js获取对象</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box2">我就是我</div>
+
+    <script>
+        // 标签
+        var box = document.getElementsByTagName("div");
+        console.log(box[0].innerText);
+        //id
+        var box1 = document.getElementById("box1");
+        console.log(box1.innerText);
+        // class
+        var box2 = document.getElementsByClassName("box2");
+        console.log(box[0].innerText);
+
+        // css选择器 可以选择后代等等。
+        var box3 = document.querySelector("div");
+        var box4 = document.querySelector("#box1");
+        var box5 = document.querySelector(".box2");
+        // 取到全部
+        var box6 = document.querySelectorAll(".box2");
+
+        console.log(box3.innerText);
+        console.log(box4.innerText);
+        console.log(box5.innerText);
+
+        console.log(box6[0].innerText);
+
+    </script>
+</body>
+</html>

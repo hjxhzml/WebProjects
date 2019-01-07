@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>种花家登录页面</title>
+    <style>
+        *{
+            /*外边距和内边距都设置为零*/
+            margin: 0;
+            padding: 0;
+        }
+        /*去掉全部a标签的下划线*/
+        a{
+            text-decoration: none;
+        }
+        body{
+            background: #ffe6a4;
+        }
+        .top{
+            height: 60px;
+            width: 100%;
+            background: black;
+        }
+        .mid{
+            height: 600px;
+            width: 100%;
+        }
+        .bot1{
+            height: 120px;
+            width: 100%;
+            background: gray;
+        }
+        .bot2{
+            height: 60px;
+            width: 100%;
+            background: black;
+        }
+        .con{
+            height: 600px;
+            width: 500px;
+            background: white;
+            /*margin:是上下左右边距30px,auto就是左右各一半*/
+            margin: 30px auto;
+        }
+        .con-top{
+            height: 50px;
+            width: 460px;
+            /*画一条线*/
+            border-bottom:1px solid #3c3c3c;
+            /*左右边距20px;*/
+            margin-left: 20px;
+            /*设置跟高度一样就会上下居中*/
+            line-height: 50px;
+        }
+        .con-top h3{
+            float:left;
+            font-weight: normal;
+            font-size: 20px;
+            /*下滑线设置*/
+            border-bottom: 3px solid blueviolet;
+        }
+        .con-top a{
+            float:right;
+            font-size: 20px;
+            color: skyblue;
+        }
+
+        .con-regist{
+            /*为本框距离左边20px*/
+            margin-left: 20px;
+        }
+        .con-regist input{
+            height: 50px;
+            width: 460px;
+            /*文本框之间的上下距离为20px*/
+            margin-top: 20px;
+            /*文本框里面的提示文本大小*/
+            font-size: 18px;
+            /*文本框里面的提示文本开头空一个字符(1em)*/
+            text-indent: 1em;
+            /*所以input边框实现圆角*/
+            border-radius: 5px;
+            /*默认边框不好看，需要重新设置*/
+            border: 1px solid gray;
+        }
+       .con-regist .guo{
+            height: 20px;
+            width: 20px;
+        }
+       .con-regist p{
+
+       }
+
+        .con-regist .btn{
+            /*提交按钮的颜色*/
+            background: #3aeb9b;
+            /*立即注册的字体颜色*/
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="mid">
+        <div class="con">
+            <div class="con-top">
+                <h3>请登录</h3>
+                <a href="index.html" target="_blank">立即注册&gt;</a>
+            </div>
+
+            <div class="con-regist">
+                <form action="" method="post">
+                    <input type="text" placeholder="请输入手机号" name="phone"><br>
+                    <input type="password" placeholder="请输入密码" name="psw"><br>
+                    <p><input class="guo" type="checkbox">七天之内自动登录 <a href="javascript:void(0);">忘记密码</a></p>
+                    <input class="btn" type="submit" value="登录">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="bot1"></div>
+
+    <div class="bot2"></div>
+
+</body>
+</html>

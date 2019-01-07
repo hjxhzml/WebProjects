@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <style>
+        /*划过的时候属性设置*/
+        a:hover{
+            font-size: 20px;
+            color: red;
+        }
+        /*未访问时候*/
+        a:link{
+            color:saddlebrown;
+        }
+        /*!*访问后*!*/
+        /*a:visited{*/
+            /*color: blueviolet;*/
+        /*}*/
+        /*激活的*/
+        a:active{
+            font-size: 40px;
+            text-decoration: underline;
+        }
+
+        div{
+            height: 200px;
+            width: 200px;
+            background: skyblue;
+        }
+        div:hover{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.baidu.com" target="_blank">百度一下</a>
+    <div>我是我</div>
+</body>
+</html>

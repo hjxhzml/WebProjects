@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动问题</title>
+    <style>
+        .box{
+            border:10px solid red;
+            /*解决方法一：只适合纯浮动的页面（超出部分隐藏），不推荐使用，定位*/
+            /*overflow: hidden;*/
+        }
+        .box div{
+            /*使box下的两个div有共同的样式*/
+            height: 100px;
+            width: 100px;
+        }
+        .left{
+            /*把下面这行代码注销和right的float注销,会看到原来的盒子是height200px的（高度塌陷）*/
+            float: left;
+            background: aqua;
+        }
+        .right{
+            float: right;
+            background: blue;
+        }
+        /*解决方法三：第二步*/
+        .clearfix::after{
+            /*三者缺一不可*/
+            /*保证是块级元素*/
+            display: block;
+            /*清除浮动*/
+            clear: both;
+            content:"";
+        }
+    </style>
+</head>
+<body>
+    <!--解决方法三（推荐使用）：第一步-->
+    <div class="box clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!--解决方法二：加一个空的div(代码多，不推荐)-->
+        <!--<div></div>-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景设置</title>
+    <style>
+        div{
+            height: 500px;
+            width: 500px;
+            background-color: aqua;
+            border: 2px solid red;
+            /*背景色*/
+            /*background-color: aque;*/
+            /*背景图*/
+            /*background-image: url("jpg/qc.jpg");*/
+            /*平铺（就是只有一张图片，不设置会有无限张）*/
+            /*background-repeat: no-repeat;*/
+
+            /*图片按照一定比例变化*/
+            /*长和宽等比例放大*/
+            /*background-size: 300px;*/
+            /*以图片最短的边为标准放到最大*/
+            /*background-size: cover;*/
+            /*以图片最长的边为标准放到最大*/
+            /*background-size: contain;*/
+
+            /*定位，图片从哪里开始放*/
+            /*background-position: 20px 30px;*/
+
+            /*background: color image repeat position/size*/
+            background: url("jpg/qc.jpg") no-repeat top/cover;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

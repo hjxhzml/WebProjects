@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>其他选择器</title>
+    <style>
+        /*分组选择器*/
+        p,div,a{
+            color: red;
+            font-size: 20px;
+        }
+
+        /*属性选择器*/
+        p[class=box]{
+            color: skyblue;
+        }
+        p[age="18"]{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 分组选择器 -->
+    <p>我是一</p>
+    <div>我是二</div>
+    <a href="javascript:void(0);">我是三</a>
+
+    <p class="box">我是四</p>
+
+    <p age="18">我是五</p>
+
+</body>
+</html>

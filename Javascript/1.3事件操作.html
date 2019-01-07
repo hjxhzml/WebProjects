@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件操作</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 100px;
+            background: skyblue;
+            line-height: 50px;
+            text-align: center;
+            /*小手的样子*/
+            cursor: pointer;
+        }
+        .box1{
+            height: 100px;
+            width: 100px;
+            background: green;
+            margin-top: 20px;
+        }
+        .box2{
+            height: 100px;
+            width: 100px;
+            background: blueviolet;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">点击事件</div>
+    <div class="box1"></div>
+    <h3>以下为鼠标移入移出事件</h3>
+    <div class="box2"></div>
+
+    <script>
+        var obj = document.getElementsByClassName("box")[0];
+        // 单击
+        obj.onclick=function() {
+            var box1 =document.getElementsByTagName("div")[1];
+            box1.style.background="url('jpg/qc.jpg')"
+            // console.log("单击")
+            // 弹出OK的浮框
+            //     alert("ok");
+        };
+        // 双击
+        obj.ondblclick=function () {
+            console.log("双击")
+        }
+
+        // 鼠标移入移出
+        // 鼠标移入
+        var box = document.querySelector(".box2");
+        box.onmouseenter=function () {
+            box.style.background="red";
+        }
+        // 鼠标移出
+        box.onmouseleave=function () {
+            box.style.background="skyblue";
+        }
+    </script>
+</body>
+</html>

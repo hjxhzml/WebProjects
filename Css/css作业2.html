@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css作业2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            /*去掉无序列表的点点*/
+            list-style: none;
+        }
+        img{
+            height: 200px;
+            width: 800px;
+            position: absolute;
+        }
+        div{
+            height: 200px;
+            width: 800px;
+            /*设置的时候用的，设置完可以注销*/
+            background: blue;
+            margin: 40px auto;
+            /*父相子绝第一步*/
+            position: relative;
+        }
+        .btn{
+            height: 200px;
+            /*大小与号的大小*/
+            font-size: 50px;
+            /*大小与号的颜色*/
+            color: white;
+            /*大小于号的加粗*/
+            font-weight: 500;
+            /*大小与号上下居中*/
+            line-height: 200px;
+            /*一般情况下隐藏大小于号*/
+            display: none;
+        }
+        .btn .left{
+            position: absolute;
+            left: 20px;
+        }
+        .btn .right{
+            position: absolute;
+            right: 20px;
+        }
+        /*鼠标放在图片上面是才会出现大小与号*/
+        div:hover .btn{
+            display: block;
+        }
+
+        .tab{
+            height: 15px;
+            /*全部的大小加起来*/
+            width: 118px;
+            /*为了设置弄的，设置完可以注销*/
+            /*border: 1px solid red;*/
+            /*绝对定位*/
+            position: absolute;
+            /*距离底部10px*/
+            bottom: 10px;
+            /*左右居中*/
+            left: 50%;
+            margin-left: -59px;
+        }
+        .tab li{
+            height: 15px;
+            width: 15px;
+            /*为了看；设置边框的大小 线的类型 颜色*/
+            border: 1px solid white;
+            /*变成圆形*/
+            border-radius: 50%;
+            /*一列变一行*/
+            float:left;
+            /*点跟点之间的距离*/
+            margin-left: 10px;
+        }
+        /*鼠标放在点上会变白*/
+        .tab li:hover{
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="pic">
+            <li><img src="https://res.shiguangkey.com//file/201806/19/20180619142252602590185.jpg"></li>
+            <li><img src="https://res.shiguangkey.com//file/201806/19/20180619141337485823895.jpg"></li>
+            <li><img src="https://res.shiguangkey.com//file/201806/21/20180621150342030454625.jpg"></li>
+            <li><img src="https://res.shiguangkey.com//file/201805/17/20180517113424433990524.jpg"></li>
+        </ul>
+        <ul class="btn">
+            <li class="left">&lt;</li>
+            <li class="right">&gt;</li>
+        </ul>
+        <ul class="tab">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

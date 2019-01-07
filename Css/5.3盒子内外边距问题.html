@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子内外边距问题</title>
+    <style>
+        .pad{
+            height: 200px;
+            width: 200px;
+            background: skyblue;
+            /*在这里把盒子撑大了100px*/
+            padding-left: 100px;
+        }
+        .mar{
+            height: 200px;
+            width: 200px;
+            background: mediumpurple;
+        }
+        .mar>div{
+            height: 100px;
+            width: 100px;
+            background: aqua;
+            /*不会改变盒子大小*/
+            margin-left: 100px;
+        }
+        .mar1{
+            height: 200px;
+            width: 200px;
+            background: mediumpurple;
+            /*总结二的问题一：解决方法*/
+            border: 1px solid red;
+        }
+        .mar1>div{
+            height: 100px;
+            width: 100px;
+            background: aqua;
+            /*总结二的问题一：两个盒子都下移30px*/
+            margin-top: 30px;
+        }
+        .mar2{
+            height: 200px;
+            width: 200px;
+            background: mediumpurple;
+            /*总结二的问题二：以这个最大的为准*/
+            margin-bottom: 100px;
+        }
+        .mar2+div{
+             height: 200px;
+            width: 200px;
+            background: aqua;
+            /*总结二的问题二：下面这个设置是无效的，取上面100px的为准*/
+            margin-top: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <h3>总结一：布局使用margin不要用padding</h3>
+    <div class="pad">padding测试</div>
+    <div class="mar">
+        <div>margin测试</div>
+    </div>
+
+    <h3>总结二：margin两个问题</h3>
+    <p>问题一：border内部div和外部div定位是需要找到边界,外部div如果没有设置border，
+    则内部div的margin设置是会一直往上找，直到找到边界位置。</p>
+    <div class="mar1">
+        <div>margin1测试</div>
+    </div>
+
+    <p>问题二：内部相邻div间的margin，取值为两个div各自设置margin的最大值，而不是相加值。</p>
+    <div class="mar2"></div>
+    <div>margin2测试</div>
+
+</body>
+</html>

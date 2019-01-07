@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性修改</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background: skyblue;
+            /*文本上下居中*/
+            line-height: 200px;
+            /*文本左右居中*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="js作业1.html" target="_blank" title="提示文本">点我去下一页</a>
+    <p>属性有：background（背景颜色）,color（字体颜色）</p>
+    <p>属性值有：yellow,red,aqua,skyblue</p>
+    <p>属&emsp;性：<input type="text" name="att" placeholder="请输入属性"></p>
+    <p>属性值：<input type="text" name="attV" placeholder="请输入属性值"></p>
+    <p><input type="button" value="设置"></p>
+    <div>我是样式一</div>
+
+    <script>
+        // 实现鼠标移入移出事件
+        var box=document.getElementsByTagName("div")[0];
+        box.onmouseenter=function () {
+            box.innerText="我是文本二"
+        }
+        box.onmouseleave=function () {
+            box.innerText="我文本一"
+        }
+        // 属性获取和样式修改
+        var obj = document.getElementsByTagName("input");
+        obj[2].onclick=function () {
+            // console.log(obj[0].value);
+            // console.log(obj[1].value);
+            var attr=obj[0].value;
+            var attrV=obj[1].value;
+            // 第一种方法
+            box.style[attr]=attrV;
+            // 第二种方法
+            // box.style.cssText=attr+":"+attrV;
+        }
+    </script>
+</body>
+</html>
